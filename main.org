@@ -1,0 +1,10 @@
+#+TITLE: Main.org
+* [[file:~/.emacs.d/main.org][Main.org]]
+** Classes
+*** [[file:org/classes/CS250.org][CS250]]
+*** [[file:org/classes/CS230.org][CS230]]
+*** [[file:org/classes/PHIL160.org][PHIL160]]
+*** [[file:org/classes/MATH233.org][MATH233]]
+
+Useful commands:
+[[elisp:(org-toggle-link-display)][Toggle Links]]

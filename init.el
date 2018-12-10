@@ -87,6 +87,11 @@
   :ensure t
   :init (global-pretty-mode t))
 
+(use-package org-bullets
+  :ensure t
+  :defer t
+  :init (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
 ;; Major modes
 (use-package web-mode
   :ensure t
@@ -110,6 +115,11 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
+
+(use-package org
+  :ensure t
+  :defer t
+  :mode ("\\.org\\'" . org-mode))
 
 (provide 'init)
 ;;; init.el ends here
