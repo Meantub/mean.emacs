@@ -1,3 +1,6 @@
-* CS250 Lecture Notes
+#+TITLE: CS250
+#+STARTUP: indent
+#+STARTUP: showall
+* Lecture Notes
 ** Lecture #37
 wow this is interesting
