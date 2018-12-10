@@ -98,6 +98,19 @@
   :defer t
   :mode ("\\.html\\'" "\\.php\\'" "\\.inc\\'"))
 
+(use-package flyspell
+  :ensure t
+  :defer t
+  :init
+  (progn
+    (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+    (add-hook 'text-mode-hook 'flyspell-mode)
+    )
+  (setq flyspell-auto-correct-binding (kbd "<S-f12>")))
+  :config
+  ;; Sets flyspell correction to use two-finger mouse click
+  (define-key flyspell-mouse-map [down-mouse-3] #'flyspell-correct-word)
+
 (use-package flycheck
   :ensure t
   :defer t

@@ -2,5 +2,35 @@
 #+STARTUP: indent
 #+STARTUP: showall
 * Lecture Notes
-** Lecture #37
-wow this is interesting
+** Lecture #38: Turing Machine Semantics
+*** A Turing Machine Example
+Here is a machine that solves a problem that a DFA cannot. When started in configuration i[ ]wwwww... It will only halt iff w is in the language otherwise it will hang
+
+*Church-Turing Thesis* mathematically accepted but it is not provable (or at least it hasnt been proven yet). But some people think it is false
+
+We can make a Turing Machine with a *Java* program
+
+*** Turing Recognizable Languages
+We've seen that a Turing Machine when started on a string, may or may not ever reach a final state. We define the language of the machine M, called L(M), to be the set of strings on which M eventually halts
+
+If a language X is equal to L(M) for some Turing Machine M, we say that X is a Turing recognizable.
+
+*** Turing Decidable Languages
+Suppose, though that the machine always halts but halts in an accepting state when the input is in the language and in a rejecting state when it is not
+
+We redefine L(M) to be the set of strings that are accepted. In the case we say that the language L(M) is *Turing decidable*.
+
+Turing Decidable -> Turing Recognizable
+
+*** TR/TD Theorem
+The *TR/TD Theorem* says that a language X is Turing decidable iff both X and its complement X-bar are Turing recognizable
+
+One half of the proof is easy. If X is decidable, so is X-bar. By the proof on an earlier slide, both X and X-bar must also be recognizable
+
+Two TM's in Parallel
+
+The trick is to run both M and N on w in parallel, When our decider starts in configuration i[ ]w the first thing it does is to make a new copy of w to the right of the original one s that the tape contents become @[ ]w#@[ ]w
+
+The left copy of w represents the initial configuration of M and the right copy is the initial configuration of M, and the right copy is the initial configuration of N, The two @ symbols mark the head positions
+
+
