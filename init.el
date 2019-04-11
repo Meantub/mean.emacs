@@ -50,6 +50,10 @@
   :ensure t
   :hook (prog-mode . global-color-identifiers-mode))
 
+(use-package diff-hl
+  :ensure t
+  :init (global-diff-hl-mode))
+
 ;; Packages
 (use-package evil
   :ensure t
