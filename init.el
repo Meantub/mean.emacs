@@ -98,6 +98,11 @@
   :defer t
   :mode ("\\.html\\'" "\\.php\\'" "\\.inc\\'"))
 
+(use-package rjsx-mode
+  :ensure t
+  :defer t
+  :mode ("\\.js\\'" "\\.jsx\\'"))
+
 (use-package flyspell
   :ensure t
   :defer t
